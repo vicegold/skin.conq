@@ -8,7 +8,7 @@
 		<!-- Player forwarding/rewinding -->
 		<control type="group">
 			<left>150</left>
-			<top>795</top>
+			<top>671</top>
 			<width>80</width>
 			<height>60</height>
 			<visible>!Window.IsVisible(VideoBookmarks)</visible>
