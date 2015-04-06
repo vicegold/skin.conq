@@ -57,6 +57,7 @@
 						<top>9</top>
 						<width>90</width>
 						<height>90</height>
+						<aspectratio>keep</aspectratio>
 						<texture background="true" fallback="pvr/defaultchannel.png">$VAR[PVRChannelIcon]</texture>
 					</control>
 
@@ -96,7 +97,6 @@
 						<top>40</top>
 						<width>30</width>
 						<height>30</height>
-						<aspectratio>scale</aspectratio>
 						<texture>pvr/Recording.png</texture>
 						<visible>ListItem.IsRecording</visible>
 					</control>
@@ -143,6 +143,7 @@
 						<top>9</top>
 						<width>90</width>
 						<height>90</height>
+						<aspectratio>keep</aspectratio>
 						<texture background="true" fallback="pvr/defaultchannel.png">$VAR[PVRChannelIcon]</texture>
 					</control>
 
@@ -180,7 +181,6 @@
 						<top>40</top>
 						<width>30</width>
 						<height>30</height>
-						<aspectratio>scale</aspectratio>
 						<texture>pvr/Recording.png</texture>
 						<visible>ListItem.IsRecording</visible>
 					</control>
@@ -269,7 +269,7 @@
 				</control>
 
 				<control type="group">
-					<top>60</top>
+					<top>76</top>
 					<visible>Container(50).ListItem.HasEpg</visible>
 
 					<!-- Plot -->
@@ -289,7 +289,7 @@
 						<top>252</top>
 						<width>682</width>
 						<height>30</height>
-						<aspectratio>scale</aspectratio>
+						<aspectratio>keep</aspectratio>
 						<font>Font25</font>
 						<align>right</align>
 						<textcolor>TextColor2</textcolor>
@@ -415,7 +415,7 @@
 					<!-- Guide -->
 					<control type="button" id="102">
 						<include>OptionButtons</include>
-						<label>$LOCALIZE[19222]: $LOCALIZE[19030]</label>
+						<label>22020</label>
 						<onclick condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">NextChannelGroup</onclick>
 						<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
 						<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
