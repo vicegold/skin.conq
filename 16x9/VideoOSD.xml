@@ -86,6 +86,44 @@
 
 		</control>
 
+		<!-- LiveTV Channel Info -->
+		<control type="group">
+			<left>150</left>
+			<top>746</top>
+			<width>1620</width>
+			<height>60</height>
+
+			<control type="image">
+				<width>1620</width>
+				<height>110</height>
+				<texture border="1">osd/OSDBack.png</texture>
+			</control>
+
+			<!-- Channel Name -->
+			<control type="label">
+				<left>20</left>
+				<top>20</top>
+				<width>1620</width>
+				<height>30</height>
+				<font>Font33</font>
+				<textcolor>DialogColor1</textcolor>
+				<label>$INFO[VideoPlayer.ChannelName]</label>
+			</control>
+
+			<!-- Title -->
+			<control type="label">
+				<left>20</left>
+				<top>25</top>
+				<width>1620</width>
+				<height>100</height>
+				<font>Font27</font>
+				<textcolor>DialogColor2</textcolor>
+				<label>$INFO[VideoPlayer.Title]</label>
+			</control>
+
+			<visible>VideoPlayer.Content(LiveTV)</visible>
+		</control>
+
 		<!-- Progress -->
 		<control type="group">
 			<left>150</left>
