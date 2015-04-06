@@ -9,10 +9,48 @@
 		<control type="group">
 			<visible>!Window.IsActive(fullscreeninfo) + !Window.IsActive(videoosd) + !Window.IsActive(musicosd) + !Window.IsActive(subtitlesearch)</visible>
 
+			<!-- LiveTV Channel Info -->
+			<control type="group">
+				<left>150</left>
+				<top>820</top>
+				<width>1620</width>
+				<height>60</height>
+
+				<control type="image">
+					<width>1620</width>
+					<height>110</height>
+					<texture border="1">osd/OSDBack.png</texture>
+				</control>
+
+				<!-- Channel Name -->
+				<control type="label">
+					<left>20</left>
+					<top>20</top>
+					<width>1620</width>
+					<height>30</height>
+					<font>Font33</font>
+					<textcolor>DialogColor1</textcolor>
+					<label>$INFO[VideoPlayer.ChannelName]</label>
+				</control>
+
+				<!-- Title -->
+				<control type="label">
+					<left>20</left>
+					<top>25</top>
+					<width>1620</width>
+					<height>100</height>
+					<font>Font27</font>
+					<textcolor>DialogColor2</textcolor>
+					<label>$INFO[VideoPlayer.Title]</label>
+				</control>
+
+				<visible>VideoPlayer.Content(LiveTV)</visible>
+			</control>
+
 			<!-- Player forwarding/rewinding -->
 			<control type="group">
 				<left>150</left>
-				<top>870</top>
+				<top>945</top>
 				<width>80</width>
 				<height>60</height>
 				<animation type="WindowOpen">
@@ -102,9 +140,9 @@
 
 			<!-- Progress -->
 			<control type="group">
-				<left>150</left>
+				<left>245</left>
 				<top>945</top>
-				<width>1620</width>
+				<width>1525</width>
 				<height>60</height>
 				<animation type="WindowOpen">
 					<effect type="zoom" start="90" end="100" center="auto" tween="back" easing="out" time="200"/>
@@ -117,7 +155,7 @@
 
 				<!-- Background -->
 				<control type="image">
-					<width>1620</width>
+					<width>1525</width>
 					<height>60</height>
 					<texture border="1">osd/OSDBack.png</texture>
 				</control>
@@ -136,7 +174,7 @@
 				<control type="progress" id="1">
 					<left>280</left>
 					<top>20</top>
-					<width>920</width>
+					<width>825</width>
 					<height>20</height>
 					<info>Player.Progress</info>
 					<texturebg border="2">osd/OSDProgressBack.png</texturebg>
@@ -150,7 +188,7 @@
 				<control type="progress" id="1">
 					<left>280</left>
 					<top>20</top>
-					<width>920</width>
+					<width>825</width>
 					<height>20</height>
 					<info>Player.ProgressCache</info>
 					<texturebg colordiffuse="00ffffff" border="2">osd/OSDProgressBack.png</texturebg>
@@ -162,7 +200,7 @@
 
 				<!-- Current Time/End Time -->
 				<control type="label">
-					<left>1001</left>
+					<left>906</left>
 					<width>600</width>
 					<height>60</height>
 					<align>right</align>
