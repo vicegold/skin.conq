@@ -200,7 +200,7 @@
 					<top>87</top>
 					<width>1580</width>
 					<height>118</height>
-					<label>$VAR[VideoPlayerPlot]</label>
+					<label>$INFO[VideoPlayer.PlotOutline][CR]$INFO[VideoPlayer.Plot]</label>
 					<font>Font25</font>
 					<textcolor>DialogColor2</textcolor>
 					<autoscroll delay="5000" time="1400" repeat="10000">true</autoscroll>
