@@ -63,7 +63,6 @@
 							<top>8</top>
 							<width>76</width>
 							<height>76</height>
-							<aspectratio>keep</aspectratio>
 							<texture background="true" fallback="pvr/defaultchannel.png">$VAR[PVRChannelIcon]</texture>
 						</control>
 
@@ -105,7 +104,6 @@
 							<top>8</top>
 							<width>76</width>
 							<height>76</height>
-							<aspectratio>keep</aspectratio>
 							<texture background="true" fallback="pvr/defaultchannel.png">$VAR[PVRChannelIcon]</texture>
 							<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="out" reversible="true" condition="!Control.HasFocus(10)">Conditional</animation>
 						</control>
@@ -159,6 +157,7 @@
 							<top>32</top>
 							<width>30</width>
 							<height>30</height>
+							<aspectratio>scale</aspectratio>
 							<texture>pvr/Recording.png</texture>
 							<visible>ListItem.IsRecording</visible>
 						</control>
@@ -201,6 +200,7 @@
 							<top>32</top>
 							<width>30</width>
 							<height>30</height>
+							<aspectratio>scale</aspectratio>
 							<texture>pvr/Recording.png</texture>
 							<visible>ListItem.IsRecording</visible>
 						</control>
@@ -227,7 +227,6 @@
 					<control type="image">
 						<width>120</width>
 						<height>120</height>
-						<aspectratio>keep</aspectratio>
 						<texture background="true" fallback="pvr/defaultchannel.png">$INFO[Container(10).ListItem.Icon]</texture>
 						<aspectratio align="right" aligny="top">keep</aspectratio>
 					</control>
@@ -250,13 +249,39 @@
 
 					<!-- Plot -->
 					<control type="textbox">
-						<left>880</left>
-						<width>800</width>
-						<height>124</height>
+						<left>710</left>
+						<top>-25</top>
+						<width>600</width>
+						<height>220</height>
 						<align>justify</align>
 						<textcolor>TextColor1</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
+						<font>Font18</font>
 						<label fallback="161">$INFO[ListItem.Plot]</label>
+					</control>
+
+					<!-- Live TV -->
+					<control type="group">
+						<left>1352</left>
+						<top>-20</top>
+						<width>423</width>
+						<control type="image">
+							<left>5</left>
+							<top>0</top>
+							<width>423</width>
+							<height>220</height>
+							<texture fallback="special://skin/backgrounds/tv.jpg">osd/OSDBack.png</texture>
+							<include>VisibleFadeEffect</include>
+							<visible>!Player.HasVideo</visible>
+						</control>
+						<control type="videowindow">
+							<left>5</left>
+							<top>0</top>
+							<width>423</width>
+							<height>220</height>
+							<visible>Player.HasVideo</visible>
+							<animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>
+						</control>
 					</control>
 
 				</control>
@@ -299,7 +324,7 @@
 					<onright>70</onright>
 					<pagecontrol>70</pagecontrol>
 					<preloaditems>2</preloaditems>
-					<viewtype label="19030">list</viewtype>				
+					<viewtype label="19030">list</viewtype>
 					<scrolltime tween="sine" easing="out">240</scrolltime>
 
 					<itemlayout width="1020" height="108">
@@ -310,7 +335,6 @@
 							<top>9</top>
 							<width>90</width>
 							<height>90</height>
-							<aspectratio>keep</aspectratio>
 							<texture background="true" fallback="pvr/defaultchannel.png">$VAR[PVRChannelIcon]</texture>
 						</control>
 
@@ -387,7 +411,6 @@
 							<top>9</top>
 							<width>90</width>
 							<height>90</height>
-							<aspectratio>keep</aspectratio>
 							<texture background="true" fallback="pvr/defaultchannel.png">$VAR[PVRChannelIcon]</texture>
 						</control>
 
@@ -498,7 +521,7 @@
 							<top>504</top>
 							<width>512</width>
 							<height>30</height>
-							<aspectratio>keep</aspectratio>
+							<aspectratio>scale</aspectratio>
 							<font>Font30</font>
 							<align>right</align>
 							<label>$INFO[Container(11).ListItem.Genre]</label>
@@ -578,7 +601,7 @@
 					<onright>70</onright>
 					<pagecontrol>70</pagecontrol>
 					<preloaditems>2</preloaditems>
-					<viewtype label="19031">list</viewtype>				
+					<viewtype label="19031">list</viewtype>
 					<scrolltime tween="sine" easing="out">240</scrolltime>
 
 					<itemlayout width="1020" height="108">
@@ -589,7 +612,6 @@
 							<top>9</top>
 							<width>90</width>
 							<height>90</height>
-							<aspectratio>keep</aspectratio>
 							<texture background="true" fallback="pvr/defaultchannel.png">$VAR[PVRChannelIcon]</texture>
 						</control>
 
@@ -666,7 +688,6 @@
 							<top>9</top>
 							<width>90</width>
 							<height>90</height>
-							<aspectratio>keep</aspectratio>
 							<texture background="true" fallback="pvr/defaultchannel.png">$VAR[PVRChannelIcon]</texture>
 						</control>
 
@@ -777,7 +798,7 @@
 							<top>504</top>
 							<width>512</width>
 							<height>30</height>
-							<aspectratio>keep</aspectratio>
+							<aspectratio>scale</aspectratio>
 							<font>Font30</font>
 							<align>right</align>
 							<label>$INFO[Container(12).ListItem.Genre]</label>
@@ -857,7 +878,7 @@
 					<onright>70</onright>
 					<pagecontrol>70</pagecontrol>
 					<preloaditems>2</preloaditems>
-					<viewtype label="19029">list</viewtype>				
+					<viewtype label="19029">list</viewtype>
 					<scrolltime tween="sine" easing="out">240</scrolltime>
 
 					<itemlayout width="1020" height="108">
@@ -888,6 +909,7 @@
 							<top>40</top>
 							<width>30</width>
 							<height>30</height>
+							<aspectratio>scale</aspectratio>
 							<texture>pvr/Recording.png</texture>
 							<visible>ListItem.IsRecording</visible>
 						</control>
@@ -958,6 +980,7 @@
 							<top>40</top>
 							<width>30</width>
 							<height>30</height>
+							<aspectratio>scale</aspectratio>
 							<texture>pvr/Recording.png</texture>
 							<visible>ListItem.IsRecording</visible>
 						</control>
@@ -1045,7 +1068,7 @@
 							<top>504</top>
 							<width>512</width>
 							<height>30</height>
-							<aspectratio>keep</aspectratio>
+							<aspectratio>scale</aspectratio>
 							<font>Font30</font>
 							<align>right</align>
 							<label>$INFO[Container(13).ListItem.Genre]</label>
@@ -1145,7 +1168,7 @@
 					<height>600</height>
 					<onup>noop</onup>
 					<ondown>noop</ondown>
-					<onleft>10</onleft>
+					<onleft>50</onleft>
 					<onright>4001</onright>
 					<itemgap>8</itemgap>
 					<scrolltime>200</scrolltime>
@@ -1160,23 +1183,19 @@
 						<label>-</label>
 						<onfocus>Down</onfocus>
 					</control>
-					<!-- View -->
-					<control type="button" id="2">
-						<include>OptionButtons</include>
-					</control>
 					<!-- Channels -->
 					<control type="button" id="100">
 						<include>OptionButtons</include>
 						<onclick condition="Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)">NextChannelGroup</onclick>
 						<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
 						<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
-						<onclick>SetFocus(10)</onclick>
+						<onclick>SetFocus(50)</onclick>
 						<label>19019</label>
 					</control>
 					<!-- Guide -->
 					<control type="button" id="102">
 						<include>OptionButtons</include>
-						<label>22020</label>
+						<label>$LOCALIZE[19222]: $LOCALIZE[19030]</label>
 						<onclick condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">NextChannelGroup</onclick>
 						<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
 						<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
@@ -1187,7 +1206,7 @@
 						<include>OptionButtons</include>
 						<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
 						<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
-						<onclick>SetFocus(10)</onclick>
+						<onclick>SetFocus(50)</onclick>
 						<label>19163</label>
 					</control>
 				</control>
@@ -1252,7 +1271,7 @@
 					<onup>noop</onup>
 					<ondown>noop</ondown>
 					<onleft>4001</onleft>
-					<onright>10</onright>
+					<onright>50</onright>
 					<itemgap>8</itemgap>
 					<scrolltime>200</scrolltime>
 					<orientation>vertical</orientation>
@@ -1271,7 +1290,7 @@
 						<include>OptionButtons</include>
 						<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
 						<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
-						<onclick>SetFocus(10)</onclick>
+						<onclick>SetFocus(50)</onclick>
 						<label>19040</label>
 					</control>
 					<!-- Search -->
@@ -1279,7 +1298,7 @@
 						<include>OptionButtons</include>
 						<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
 						<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
-						<onclick>SetFocus(10)</onclick>
+						<onclick>SetFocus(50)</onclick>
 						<label>137</label>
 					</control>
 				</control>

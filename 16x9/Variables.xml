@@ -39,7 +39,6 @@
 	</variable>
 
 	<variable name="PVRChannelIcon">
-		<value condition="ListItem.IsEncrypted">pvr/encrypted.png</value>
 		<value>$INFO[ListItem.Thumb]</value>
 	</variable>
 
